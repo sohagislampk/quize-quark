@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='mx-16 text-left my-10'>
+        <div className='mx-8 md:mx-16 text-left my-10'>
             <div> <h1 className='text-2xl font-semibold mt-8 mb-3'>Question : What is the purpose of use React Router ?</h1>
                 <p><strong>Answer :</strong> React Router, and dynamic, client-side routing, allows us to build a single-page web application with navigation without the page refreshing as the user navigates. React Router uses component structure to call components, which display the appropriate information.
 
