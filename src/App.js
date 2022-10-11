@@ -1,13 +1,43 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
-import Header from './Components/Header/Header';
-import Navbar from './Components/Navbar/Navbar';
+import Blog from './Components/Blog/Blog';
+import Home from './Components/Home/Home';
+import Statistics from './Components/Statistics/Statistics';
+import Topics from './Components/Topics/Topics';
+import Main from './Layouts/Main';
+
 
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Main></Main>,
+      children: [
+        {
+          path: '/',
+          element: <Home></Home>
+        },
+        {
+          path: '/topics',
+          loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+          element: <Topics></Topics>
+        },
+        {
+          path: 'statistics',
+          element: <Statistics></Statistics>
+        },
+        {
+          path: 'blog',
+          element: <Blog></Blog>
+        }
+      ]
+    },
+
+  ])
   return (
     <div className="App">
-      <Navbar></Navbar>
-      <Header></Header>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
