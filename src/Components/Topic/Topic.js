@@ -1,5 +1,4 @@
-import React from 'react';
-import ReactDOM from 'react-dom'
+import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom';
