@@ -1,11 +1,20 @@
 
 import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+const Option = ({ option, correctAnswer }) => {
+    const checkAnswer = () => {
+        if (option === correctAnswer) {
+            toast.success('Congratulations !!! Your Answer Is Correct')
+        } else {
+            toast.warning('Sorry !!! Your Answer is Wrong')
+        }
+    }
 
-const Option = ({ option }) => {
     return (
         <div className='text-left my-2'>
-            <input type="radio" name="Correct Answer" /> {option}
-
+            <input onClick={checkAnswer} type="radio" name="Corrrect Answer" /> {option}
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
