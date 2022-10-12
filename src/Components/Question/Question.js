@@ -13,7 +13,7 @@ const Question = (props) => {
         <div className='mt-4 md:w-7/12 mx-auto text-left bg-slate-400 p-6 rounded-3xl'>
             <dir className='text-right m-0'><FontAwesomeIcon onClick={notify} icon={faEye} /></dir>
             <h1 className='font-bold mb-1'>{props.index + 1}. {question}</h1>
-            <div className='grid grid-cols-2 justify-center items-center'>
+            <div className='grid md:grid-cols-2 md:justify-center items-center'>
                 {
                     options.map((option, index) => <Option
                         key={index}
