@@ -11,8 +11,8 @@ const Question = (props) => {
 
     return (
         <div className='mt-4 md:w-7/12 mx-auto text-left bg-slate-400 p-6 rounded-3xl'>
-            <dir className='text-right m-0'><FontAwesomeIcon onClick={notify} icon={faEye} /></dir>
-            <h1 className='font-bold mb-1'>{props.index + 1}. {question}</h1>
+            <dir className='text-right m-0'><FontAwesomeIcon icon={faEye} onClick={notify} /></dir>
+            <h1 className='font-bold mb-1'>{props.index + 1}. {question.slice(3, question.length - 4)}</h1>
             <div className='grid md:grid-cols-2 md:justify-center items-center'>
                 {
                     options.map((option, index) => <Option
@@ -22,7 +22,7 @@ const Question = (props) => {
                     ></Option>)
                 }
             </div>
-            <ToastContainer />
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

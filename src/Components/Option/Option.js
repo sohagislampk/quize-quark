@@ -13,7 +13,7 @@ const Option = ({ option, correctAnswer }) => {
 
     return (
         <div className='text-left my-2'>
-            <input onClick={checkAnswer} type="radio" value="id" name="Corrrect Answer" /> {option}
+            <label className='hover:font-bold'><input type="radio" name="Corrrect Answer" onClick={checkAnswer} /> {option}</label>
             <ToastContainer></ToastContainer>
         </div>
     );
